@@ -68,7 +68,7 @@ public class AddActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_save:
-                insertCanciones();
+                guardarCancionesList();
                 finish();
                 return true;
             case android.R.id.home:
@@ -115,7 +115,7 @@ public class AddActivity extends AppCompatActivity {
 
     }
 
-    private void insertCanciones(){
+    private void guardarCancionesList(){
         Track track= new Track();
         Track.Artist artist = new Track.Artist();
         artist.name = artista.getText().toString();
